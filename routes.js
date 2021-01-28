@@ -2,8 +2,9 @@ const { Router } = require('express');
 
 const routes = new Router();
 
-routes.get('/', (request, response) => {
-    return response.render('index');
-});
+// Controllers =>
+const IndexController = require('./controllers/IndexController');
+
+routes.get('/', IndexController.Index);
 
 module.exports = routes;
