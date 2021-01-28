@@ -3,8 +3,14 @@ const { Router } = require('express');
 const routes = new Router();
 
 // Controllers =>
-const IndexController = require('./controllers/IndexController');
+const MembersController = require('./app/controllers/MembersController');
+const InstructorsController = require('./app/controllers/InstructorsController');
 
-routes.get('/', IndexController.Index);
+// Routes (Members) =>
+routes.get('/', MembersController.Index);
+
+// Routes (Instructors) =>
+routes.get('/instructors', InstructorsController.Index);
+
 
 module.exports = routes;
