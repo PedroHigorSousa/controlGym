@@ -48,6 +48,8 @@ body {
     text-decoration: none;
     color: #ffffff;
     transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #container-menu #main ul li a.active {
