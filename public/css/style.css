@@ -140,9 +140,9 @@ body {
 
 .details .item div:nth-child(2) span {
     padding: 8px 16px;
-    background-color: #aaa;
+    background: var(--color-yellow);
     border-radius: 0.40rem;
-    color: #777;
+    color: #000000;
     margin-right: 4px;
     margin-top: 8px;
     display: inline-block;
