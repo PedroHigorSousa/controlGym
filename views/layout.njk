@@ -8,12 +8,13 @@
         {% endblock %}
 
         {# main css import #}
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
         <header>
             <section id="container-menu">
-                <img src="img/logo-2.jpg" alt="">
+                <a href="/">
+                    <img src="/img/logo-2.jpg" alt=""></a>
                 <nav id="main">
                     <ul>
                         <li>
@@ -29,6 +30,6 @@
 
         {% block content %}{% endblock content %}
 
-        <script src="js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

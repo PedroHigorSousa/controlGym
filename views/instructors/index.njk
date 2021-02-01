@@ -1,4 +1,4 @@
-{% extends "index.njk" %}
+{% extends "layout.njk" %}
 
 {% block content %}
     <section class="card">
@@ -31,5 +31,12 @@
                 <div>01/01/2020</div>
             </div>
         </div>
+    </section>
+
+    {# Buttons manager ================> #}
+    <section class="buttons-manager">
+        <a href="/instructors/create">
+            Cadastrar novo instrutor
+        </a>
     </section>
 {% endblock content %}

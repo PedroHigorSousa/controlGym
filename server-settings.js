@@ -5,31 +5,31 @@ const nunjucks = require('nunjucks');
 const routes = require('./routes');
 
 class Server {
-    constructor() {
-        this.server = express();
+  constructor() {
+    this.server = express();
 
-        this.middlewares();
-        this.templateEngine();
-        this.routes();
-    }
+    this.middlewares();
+    this.templateEngine();
+    this.routes();
+  }
 
-    middlewares() {
-        this.server.use(express.json());
-        this.server.set('view engine', 'njk');
-        this.server.use(express.static('public'));
-    }
+  middlewares() {
+    this.server.use(express.json());
+    this.server.use(express.static('public'));
+    this.server.set('view engine', 'njk');
+  }
 
-    routes() {
-        this.server.use(routes);
-    }
+  routes() {
+    this.server.use(routes);
+  }
 
-    templateEngine() {
-        nunjucks.configure('views', {
-            express: this.server,
-            autoescape: false,
-            noCache: true
-        })
-    };
-};
+  templateEngine() {
+    nunjucks.configure('views', {
+      express: this.server,
+      autoescape: false,
+      noCache: true,
+    });
+  }
+}
 
 module.exports = new Server().server;
